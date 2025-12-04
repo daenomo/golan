@@ -1,0 +1,13 @@
+{
+  "name": "golang-dev-container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "golang-dev-container",
+  "workspaceFolder": "/home/dev-user/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go"
+      ]
+    }
+  }
+}

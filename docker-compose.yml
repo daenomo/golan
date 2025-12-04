@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  golang-dev-container:
+    # Dockerfileがあるディレクトリを指定してビルド
+    build: 
+      dockerfile: Dockerfile
+      context: .
+      args:
+        - USERNAME=${USERNAME:-dev-user}
+    # コンテナに名前をつける
+    container_name: golang-dev-container
+    # ホストのカレントディレクトリをコンテナの/appにマウント
+    # これにより、ホストで編集したコードがコンテナに即時反映される
+    volumes:
+      - .:/home/${USERNAME:-dev-user}/app
+      # sbtのキャッシュを永続化し、2回目以降のビルドを高速化
+    stdin_open: true
+    tty: true
+
