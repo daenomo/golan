@@ -1,0 +1,56 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build output
+/bin/
+/build/
+/dist/
+
+# Vendor directories
+/vendor/
+Godeps/
+
+# Go specific
+# Do NOT ignore go.mod or go.sum
+*_test.go
+
+# Dependency directories
+node_modules/
+
+# Env files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# macOS
+.DS_Store
+
+# Docker
+# ignore compose override files and local compose files
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# Temporary files
+*.tmp
+*.temp
+
+# Secrets and local configs
+secrets.yml
+secrets.json
+
+# Coverage
+coverage.out
